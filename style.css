@@ -1,0 +1,101 @@
+html * {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: url("assets/mountains_background.svg") no-repeat center fixed;
+    background-size: cover;
+
+    text-align: center;
+}
+
+/* Main Page */
+nav.menu-nav {
+    text-align: right;
+}
+
+nav.menu-nav ul {
+    margin-top: 25px;
+    margin-right: 10px;
+    padding: 0;
+}
+
+nav.menu-nav ul li.btn {
+    display: inline-block;
+
+    list-style-type: none;
+    list-style: none;
+}
+
+nav.menu-nav ul li.btn a {
+    color:#999;
+    background:rgba(0, 0, 0, 0.5);
+
+    font-size: 15px;
+    letter-spacing:2px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    border-radius: 12px;
+    padding:8px 20px;
+}
+
+nav.menu-nav ul li.btn:hover a {
+    color: #1b1b1b;
+    background:#fff;
+    transition: 0.3s all;
+}
+
+h1 {
+    width: 100%;
+    transform: translate(0%, 15vh);
+}
+
+p.body-description {
+    width: 50%;
+    transform: translate(50%, 25vh);
+
+    background-color: rgba(218, 181, 210, 0.8);
+    border-radius: 12px;
+    padding: 10px 0px;
+}
+
+p.copyright {
+    text-align: center;
+
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+}
+
+/* Development page */
+nav.menu-tutos {
+    text-align: left;
+}
+
+nav.menu-tutos ul li {
+    padding: 50px;    
+}
+
+nav.menu-tutos ul li.btn-tutos {
+    list-style-type: none;
+    list-style: none;
+}
+
+nav.menu-tutos ul li.btn-tutos a {
+    color:#999;
+    background:rgba(0, 0, 0, 0.5);
+
+    text-transform: uppercase;
+    text-decoration: none;
+
+    padding: 10px 20px;
+    border-radius:10px;  
+}
+
+nav.menu-tutos ul li.btn-tutos:hover a {
+    color: #1b1b1b;
+    background:#fff;
+    transition: 0.3s all;
+}
+
