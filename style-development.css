@@ -1,0 +1,99 @@
+html * {
+    font-family: 'Roboto', sans-serif;
+    
+    padding: 0; /* CHROME PADDING FIX */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: url("assets/mountains_background.svg") no-repeat center fixed;
+    background-size: cover;
+
+    text-align: center;
+}
+
+ul li * {
+    list-style-type: none;
+    list-style: none;
+
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+/*-----------------*/
+/*    Main Nav     */
+/*-----------------*/
+nav.menu-nav {
+    text-align: right;
+}
+
+nav.menu-nav ul {
+    margin-top: 25px;
+    margin-right: 10px;
+}
+
+nav.menu-nav ul li.btn {
+    display: inline-block;
+}
+
+nav.menu-nav ul li.btn a {
+    color:#999;
+    background:rgba(0, 0, 0, 0.5);
+
+    font-size: 15px;
+    letter-spacing: 2px;
+
+    border-radius: 12px;
+    padding: 8px 20px;
+}
+
+nav.menu-nav ul li.btn:hover a {
+    color: #1b1b1b;
+    background:#fff;
+    transition: 0.3s all;
+}
+
+/*-----------------*/
+/*    Left Panel   */
+/*-----------------*/
+div.left-panel {
+    position: fixed;
+    width: 225px;
+    height: 100%;
+
+    top: -3px;
+    left: 0;
+    background-color: rgb(126, 126, 126, 0.8);
+
+    border-right: 30px;
+    border: 3px solid rgba(82, 82, 82, 0.7);
+}
+
+div.nav.left-panel {
+    text-align: left;
+}
+
+nav.left-panel-nav ul {
+    margin-top: 25px;
+}
+
+nav.left-panel-nav ul li.left-panel-button {
+    padding-top: 30px;
+}
+
+nav.left-panel-nav ul li.left-panel-button a {
+    color:rgb(252, 164, 0);
+    background:rgba(0, 0, 0, 0.5);
+
+    padding: 10px 75px;
+}
+
+nav.left-panel-nav ul li.left-panel-button a:hover {
+    color: #1b1b1b;
+    background:#fff;
+    transition: 0.3s all;
+}
+
