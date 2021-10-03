@@ -1,156 +1,97 @@
-html * {
-    font-family: 'Roboto', sans-serif;
-    
-    padding: 0; /* CHROME PADDING FIX */
+* {
+    box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+html, body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
 }
+
+.header {
+    background: rgb(82, 81, 80);
+
+    height: 120px;
+    padding: 20px;
+    margin-bottom: 50px;
+
+    text-align: center;
+}
+
+.header-title {
+    margin-top: 0;
+}
+
+.header-nav {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.header-nav .nav-button {
+    background: lightsalmon;
+    border-radius: 12px;
+
+    padding: 5px 10px;
+    margin: 10px;
+
+    text-decoration: none;
+    color: black;
+}
+
+.header-nav .nav-button:hover {
+    color: yellow;
+}
+
 
 body {
-    background: url("assets/mountains_background.svg") no-repeat center fixed;
-    background-size: cover;
+    margin: 0;
+    line-height: 1.4;
+    letter-spacing: 0.2;
+    background: lightgray;
+}
 
+.center-h {
     text-align: center;
-}
-
-ul li * {
-    list-style-type: none;
-    list-style: none;
-
-    text-transform: uppercase;
-    text-decoration: none;
-}
-
-/*-----------------*/
-/*    Main Page    */
-/*-----------------*/
-nav.menu-nav {
-    text-align: right;
-}
-
-nav.menu-nav ul {
-    margin-top: 25px;
-    margin-right: 10px;
-}
-
-nav.menu-nav ul li.btn {
-    display: inline-block;
-}
-
-nav.menu-nav ul li.btn a {
-    color:#999;
-    background:rgba(0, 0, 0, 0.5);
-
-    font-size: 15px;
-    letter-spacing: 2px;
-
-    border-radius: 12px;
-    padding: 8px 20px;
-}
-
-nav.menu-nav ul li.btn:hover a {
-    color: #1b1b1b;
-    background:#fff;
-    transition: 0.3s all;
-}
-
-h1.title-main {
-    width: 100%;
-    transform: translate(0%, 15vh);
-}
-
-p.body-description {
-    width: 50%;
-    transform: translate(50%, 25vh);
-
-    background-color: rgba(218, 181, 210, 0.8);
-    border-radius: 12px;
-    padding: 10px 0px;
-}
-
-h3.button-project {
-    display: inline-block;
-    width: 15%;
-    transform: translate(0%, 35VH);
-}
-
-h3.button-project a {
-    text-decoration: none;
-    color: white;
-    
-    background-color: rgba(26, 124, 13, 0.9);
-    padding: 10px;
+    background: lightsalmon;
+    margin: 20px 500px 50px;
     border-radius: 10px;
-
-    font-weight: 100;
-
-    transition: 0.3s all;
 }
 
-h3.button-project a:hover {
-    cursor: pointer;
-    
-    color: rgb(255, 217, 0);
-    
-    padding-left: 30px;
-    padding-right: 30px;
-    border-radius: 20px;
-
-    transition: 0.3s all;
-}
-
-/*-----------------*/
-/* Project section */
-/*-----------------*/
-div.project-section {
-    width: 100%;
-    transform: translate(0%, 40vh);
-}
-
-h1.title-project {
-    width: 100%;
-    transform: translate(0%, 25vh);
-}
-
-p.body-description-project {
-    width: 50%;
-    transform: translate(50%, 35vh);
-
-    background-color: rgba(218, 181, 210, 0.8);
-    border-radius: 12px;
-    padding: 10px 0px;
-}
-
-nav.menu-project {
+body img {
     text-align: center;
-    transform: translate(0%, 80vh);
-
-    padding-bottom: 100px;
+    margin: auto;
+    display: flex;
 }
 
-nav.menu-project ul li.project-button {
-    display: inline-block;
-    margin: 10px;
+body .body-p {
+    text-align: center;
+    background: rgba(121, 121, 121, 0.5);
+    border-radius: 18px;
+
+    width: 50%;
+    margin: auto;
+    display: flex; 
+
+    padding: 10px;
+    margin: 50px auto;
 }
 
-nav.menu-project ul li.project-button a {
-    color: rgb(0, 0, 0);
-    font-weight: 700;
-    text-decoration: underline;
-    text-shadow: 1px 1px 2px black, 0 0 1em orangered, 0 0 0.2em orangered;
+.coc-button {
+    text-align: center;
+    text-decoration: none;
+    background: lightgreen;
 
-    padding: 10px 50px;
-    padding-top: 250px;
-    border-radius: 10px; 
-
-    background-position: center;
-    background-size: 250px 280px;
-    transition: 0.3s all;
+    margin-left: 30px;
+    padding: 10px;
+    border-radius: 12px;
 }
 
-nav.menu-project ul li.project-button:hover a {
-    background-size: 350px 400px;
-    transition: 0.3s all;
+footer {
+    background: gray;
+
+    margin-top: 20px;
+
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
