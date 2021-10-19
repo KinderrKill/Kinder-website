@@ -1,156 +1,40 @@
-html * {
-    font-family: 'Roboto', sans-serif;
-    
-    padding: 0; /* CHROME PADDING FIX */
+@font-face {
+    font-family: 'D-DIN Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('D-DIN Regular'), url('fonts/D-DIN.woff') format('woff');
 }
 
-html {
+/* Global modification */
+* {
     scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
+html * {
+    margin: 0; /* Chrome margin FIX */
+    font-family: "D-DIN Regular";
+    font-size: 1.2em;
+    
+    transition: all 0.3s;
+}
+
+/*==================*/
+/*===== HEADER =====*/
+/*==================*/
+.header-container {}
+
+.header-nav img {}
+
+.header-nav {}
+
+/*==================*/
+/*====== BODY ======*/
+/*==================*/
 body {
-    background: url("assets/mountains_background.svg") no-repeat center fixed;
-    background-size: cover;
-
-    text-align: center;
+    background-color: rgb(44, 47, 51);
 }
 
-ul li * {
-    list-style-type: none;
-    list-style: none;
-
-    text-transform: uppercase;
-    text-decoration: none;
-}
-
-/*-----------------*/
-/*    Main Page    */
-/*-----------------*/
-nav.menu-nav {
-    text-align: right;
-}
-
-nav.menu-nav ul {
-    margin-top: 25px;
-    margin-right: 10px;
-}
-
-nav.menu-nav ul li.btn {
-    display: inline-block;
-}
-
-nav.menu-nav ul li.btn a {
-    color:#999;
-    background:rgba(0, 0, 0, 0.5);
-
-    font-size: 15px;
-    letter-spacing: 2px;
-
-    border-radius: 12px;
-    padding: 8px 20px;
-}
-
-nav.menu-nav ul li.btn:hover a {
-    color: #1b1b1b;
-    background:#fff;
-    transition: 0.3s all;
-}
-
-h1.title-main {
-    width: 100%;
-    transform: translate(0%, 15vh);
-}
-
-p.body-description {
-    width: 50%;
-    transform: translate(50%, 25vh);
-
-    background-color: rgba(218, 181, 210, 0.8);
-    border-radius: 12px;
-    padding: 10px 0px;
-}
-
-h3.button-project {
-    display: inline-block;
-    width: 15%;
-    transform: translate(0%, 35VH);
-}
-
-h3.button-project a {
-    text-decoration: none;
-    color: white;
-    
-    background-color: rgba(26, 124, 13, 0.9);
-    padding: 10px;
-    border-radius: 10px;
-
-    font-weight: 100;
-
-    transition: 0.3s all;
-}
-
-h3.button-project a:hover {
-    cursor: pointer;
-    
-    color: rgb(255, 217, 0);
-    
-    padding-left: 30px;
-    padding-right: 30px;
-    border-radius: 20px;
-
-    transition: 0.3s all;
-}
-
-/*-----------------*/
-/* Project section */
-/*-----------------*/
-div.project-section {
-    width: 100%;
-    transform: translate(0%, 40vh);
-}
-
-h1.title-project {
-    width: 100%;
-    transform: translate(0%, 25vh);
-}
-
-p.body-description-project {
-    width: 50%;
-    transform: translate(50%, 35vh);
-
-    background-color: rgba(218, 181, 210, 0.8);
-    border-radius: 12px;
-    padding: 10px 0px;
-}
-
-nav.menu-project {
-    text-align: center;
-    transform: translate(0%, 80vh);
-
-    padding-bottom: 100px;
-}
-
-nav.menu-project ul li.project-button {
-    display: inline-block;
-    margin: 10px;
-}
-
-nav.menu-project ul li.project-button a {
-    color: rgb(0, 0, 0);
-    font-weight: 700;
-    text-decoration: underline;
-    text-shadow: 1px 1px 2px black, 0 0 1em orangered, 0 0 0.2em orangered;
-
-    padding: 10px 50px;
-    padding-top: 250px;
-    border-radius: 10px; 
-
-    background-position: center;
-    background-size: 250px 280px;
-    transition: 0.3s all;
-}
-
-nav.menu-project ul li.project-button:hover a {
-    background-size: 350px 400px;
-    transition: 0.3s all;
-}
+/*==================*/
+/*===== FOOTER =====*/
+/*==================*/
