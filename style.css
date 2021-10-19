@@ -53,7 +53,8 @@ html * {
 
     text-align: right;
     margin-top: 35px;
-    padding-right: 17vh;
+    margin-left: 100px;
+    padding-right: 27vh;
 }
 
 .main-nav a {
@@ -63,7 +64,8 @@ html * {
     letter-spacing: 3px;
     font-size: 0.8em;
 
-    padding: 0 20px;
+    margin: 0 15px;
+    padding: 0 5px;
 }
 
 .main-nav a:hover {
