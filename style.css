@@ -19,6 +19,12 @@ html * {
     transition: all 0.3s;
 }
 
+h2 {
+    margin-left: 100px;
+    font-size: 1.5em;
+    color: #D97D0E;
+}
+
 /*==================*/
 /*===== HEADER =====*/
 /*==================*/
@@ -37,7 +43,7 @@ html * {
 
 .nav-logo img.top {
     position: absolute;
-    z-index: 100;
+    z-index: 1;
 
     transition: opacity 0.5s ease-in-out;
 }
@@ -53,8 +59,7 @@ html * {
 
     text-align: right;
     margin-top: 35px;
-    margin-left: 100px;
-    padding-right: 27vh;
+    padding-right: 16vh;
 }
 
 .main-nav a {
@@ -97,12 +102,156 @@ html * {
     right: 3vh;
 }
 
+.main-panel .container {
+    position: relative;
+    top: 40vh;
+    margin-left: 100px; 
+}
+
+.main-panel .container h1 {
+    font-size: 3em;
+    margin-left: -3px;
+    color: white;
+}
+
+.main-panel .container p {
+    width: 40%;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    color: white;
+    font-size: 0.9em;
+}
+
+.container a {
+    text-decoration: none;
+    color: white;
+
+    font-size: 0.9em;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #D97D0E;
+
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.75);
+}
+
+.container a:hover {
+    background-color: #993415;
+    box-shadow: 0px 8px 8px 0px rgba(0,0,0,0.75);
+}
+
+/*=== WHO IS PANEL ===*/
+.who-is {
+    margin: 160px 0;
+}
+
+.who-is p {
+    margin-top: 20px;
+    margin-left: 100px;
+
+    width: 50%;
+    font-size: 0.9em;
+    color: #993415;
+}
+
+.info-yt-container {
+    position: relative;
+    left: 60%;
+    margin: -245px 0 0 110px;
+    width: 300px;
+    height: 350px;
+    border-left: 8px solid #993415;
+}
+
 /*=== PROJECT PANEL ===*/
 .project-panel {
     width: 100%;
     height: 100vh;
     
     background-size: 100% 100vh;
+}
+
+/*=== CONTAINER VIDEO DISCOVER ===*/
+.container-video {
+    display: none;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    z-index: 10;
+
+    background-color: rgb(0, 0, 0, 0.8);
+}
+
+.container-video iframe {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+    background-color: #993415;
+    padding: 5px;
+}
+
+.container-video .hide-button {
+    z-index: 11;
+    
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px 25px;
+
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #993415;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.75);
+
+    font-size: 1.5em;
+    color: white;
+}
+
+.container-video .hide-button:hover {
+    background-color: #D97D0E;
+    box-shadow: 0px 8px 8px 0px rgba(0,0,0,0.75);
+    cursor: pointer;
+}
+
+.container-video .subscribe-button {
+    z-index: 11;
+    
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    padding: 10px 15px;
+    border-radius: 12px;
+    background-color: #D97D0E;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.75);
+
+    text-decoration: none;
+    font-size: 1.5em;
+    color: white;
+}
+
+.container-video .subscribe-button:hover {
+    z-index: 11;
+    
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    padding: 10px 15px;
+    border-radius: 12px;
+    background-color: #993415;
+    box-shadow: 0px 8px 8px 0px rgba(0,0,0,0.75);
+
+    text-decoration: none;
+    font-size: 1.6em;
+    color: white;
 }
 
 /*==================*/
