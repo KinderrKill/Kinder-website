@@ -14,7 +14,7 @@
 html * {
     margin: 0; /* Chrome margin FIX */
     font-family: "D-DIN Regular";
-    font-size: 1.2em;
+    font-size: 1.1em;
     
     transition: all 0.3s;
 }
@@ -22,17 +22,85 @@ html * {
 /*==================*/
 /*===== HEADER =====*/
 /*==================*/
-.header-container {}
+.header-nav, .main-nav {
+    position: absolute;
+    top: 0;
+    width : 100%;
+    height: 85px;
+}
 
-.header-nav img {}
+.nav-logo img {
+    position: absolute;
+    left: 80px;
+    top: 5px;
+}
 
-.header-nav {}
+.nav-logo img.top {
+    position: absolute;
+    z-index: 100;
+
+    transition: opacity 0.5s ease-in-out;
+}
+
+.nav-logo img.top:hover {
+    opacity: 0;
+    cursor: pointer;
+}
+
+.main-nav {
+    display: inline-block;
+    width: 100%;
+
+    text-align: right;
+    margin-top: 35px;
+    padding-right: 17vh;
+}
+
+.main-nav a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 3px;
+    font-size: 0.8em;
+
+    padding: 0 20px;
+}
+
+.main-nav a:hover {
+    color: #993415;
+}
 
 /*==================*/
 /*====== BODY ======*/
 /*==================*/
-body {
-    background-color: rgb(44, 47, 51);
+
+/*=== MAIN PANEL ===*/
+.main-panel {
+    width: 100%;
+    height: 100vh;
+    
+    background-size: 100% 100vh;
+}
+
+.computer-img img {
+    position: absolute;
+
+    top: 29vh;
+    right: 12.3vh;
+}
+
+.computer-img .back {
+    width: 50%;
+    top: 15vh;
+    right: 3vh;
+}
+
+/*=== PROJECT PANEL ===*/
+.project-panel {
+    width: 100%;
+    height: 100vh;
+    
+    background-size: 100% 100vh;
 }
 
 /*==================*/
