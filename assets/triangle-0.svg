@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="190.919" height="190.919" viewBox="0 0 190.919 190.919">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#993415"/>
+      <stop offset="1" stop-color="#d97d0e"/>
+    </linearGradient>
+  </defs>
+  <path id="Triangle_bas_" data-name="Triangle bas " d="M59.525,22.371a15,15,0,0,1,25.951,0l46.46,80.1A15,15,0,0,1,118.96,125H26.04a15,15,0,0,1-12.975-22.526Z" transform="translate(88.388) rotate(45)" fill="url(#linear-gradient)"/>
+</svg>
