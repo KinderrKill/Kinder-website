@@ -1,156 +1,108 @@
-html * {
-    font-family: 'Roboto', sans-serif;
-    
-    padding: 0; /* CHROME PADDING FIX */
+@font-face {
+    font-family: 'D-DIN Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('D-DIN Regular'), url('fonts/D-DIN.woff') format('woff');
 }
 
-html {
+/* Global modification */
+* {
     scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
-body {
-    background: url("assets/mountains_background.svg") no-repeat center fixed;
-    background-size: cover;
-
-    text-align: center;
+html * {
+    margin: 0; /* Chrome margin FIX */
+    font-family: "D-DIN Regular";
+    font-size: 1.1em;
+    
+    transition: all 0.3s;
 }
 
-ul li * {
-    list-style-type: none;
-    list-style: none;
+/*==================*/
+/*===== HEADER =====*/
+/*==================*/
+.header-nav, .main-nav {
+    position: absolute;
+    top: 0;
+    width : 100%;
+    height: 85px;
+}
 
+.nav-logo img {
+    position: absolute;
+    left: 80px;
+    top: 5px;
+}
+
+.nav-logo img.top {
+    position: absolute;
+    z-index: 100;
+
+    transition: opacity 0.5s ease-in-out;
+}
+
+.nav-logo img.top:hover {
+    opacity: 0;
+    cursor: pointer;
+}
+
+.main-nav {
+    display: inline-block;
+    width: 100%;
+
+    text-align: right;
+    margin-top: 35px;
+    padding-right: 17vh;
+}
+
+.main-nav a {
     text-transform: uppercase;
     text-decoration: none;
-}
-
-/*-----------------*/
-/*    Main Page    */
-/*-----------------*/
-nav.menu-nav {
-    text-align: right;
-}
-
-nav.menu-nav ul {
-    margin-top: 25px;
-    margin-right: 10px;
-}
-
-nav.menu-nav ul li.btn {
-    display: inline-block;
-}
-
-nav.menu-nav ul li.btn a {
-    color:#999;
-    background:rgba(0, 0, 0, 0.5);
-
-    font-size: 15px;
-    letter-spacing: 2px;
-
-    border-radius: 12px;
-    padding: 8px 20px;
-}
-
-nav.menu-nav ul li.btn:hover a {
-    color: #1b1b1b;
-    background:#fff;
-    transition: 0.3s all;
-}
-
-h1.title-main {
-    width: 100%;
-    transform: translate(0%, 15vh);
-}
-
-p.body-description {
-    width: 50%;
-    transform: translate(50%, 25vh);
-
-    background-color: rgba(218, 181, 210, 0.8);
-    border-radius: 12px;
-    padding: 10px 0px;
-}
-
-h3.button-project {
-    display: inline-block;
-    width: 15%;
-    transform: translate(0%, 35VH);
-}
-
-h3.button-project a {
-    text-decoration: none;
     color: white;
-    
-    background-color: rgba(26, 124, 13, 0.9);
-    padding: 10px;
-    border-radius: 10px;
+    letter-spacing: 3px;
+    font-size: 0.8em;
 
-    font-weight: 100;
-
-    transition: 0.3s all;
+    padding: 0 20px;
 }
 
-h3.button-project a:hover {
-    cursor: pointer;
-    
-    color: rgb(255, 217, 0);
-    
-    padding-left: 30px;
-    padding-right: 30px;
-    border-radius: 20px;
-
-    transition: 0.3s all;
+.main-nav a:hover {
+    color: #993415;
 }
 
-/*-----------------*/
-/* Project section */
-/*-----------------*/
-div.project-section {
+/*==================*/
+/*====== BODY ======*/
+/*==================*/
+
+/*=== MAIN PANEL ===*/
+.main-panel {
     width: 100%;
-    transform: translate(0%, 40vh);
+    height: 100vh;
+    
+    background-size: 100% 100vh;
 }
 
-h1.title-project {
-    width: 100%;
-    transform: translate(0%, 25vh);
+.computer-img img {
+    position: absolute;
+
+    top: 29vh;
+    right: 12.3vh;
 }
 
-p.body-description-project {
+.computer-img .back {
     width: 50%;
-    transform: translate(50%, 35vh);
-
-    background-color: rgba(218, 181, 210, 0.8);
-    border-radius: 12px;
-    padding: 10px 0px;
+    top: 15vh;
+    right: 3vh;
 }
 
-nav.menu-project {
-    text-align: center;
-    transform: translate(0%, 80vh);
-
-    padding-bottom: 100px;
+/*=== PROJECT PANEL ===*/
+.project-panel {
+    width: 100%;
+    height: 100vh;
+    
+    background-size: 100% 100vh;
 }
 
-nav.menu-project ul li.project-button {
-    display: inline-block;
-    margin: 10px;
-}
-
-nav.menu-project ul li.project-button a {
-    color: rgb(0, 0, 0);
-    font-weight: 700;
-    text-decoration: underline;
-    text-shadow: 1px 1px 2px black, 0 0 1em orangered, 0 0 0.2em orangered;
-
-    padding: 10px 50px;
-    padding-top: 250px;
-    border-radius: 10px; 
-
-    background-position: center;
-    background-size: 250px 280px;
-    transition: 0.3s all;
-}
-
-nav.menu-project ul li.project-button:hover a {
-    background-size: 350px 400px;
-    transition: 0.3s all;
-}
+/*==================*/
+/*===== FOOTER =====*/
+/*==================*/
