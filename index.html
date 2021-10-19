@@ -19,28 +19,96 @@
             <img class="top" src="assets/logo-white.svg" alt="Kinderrkill main logo">
         </div>
         <nav class="main-nav">
-            <a href="#" class="button">Accueil</a>
-            <a href="#" class="button">Présentation</a>
+            <a href="#HOME" class="button">Accueil</a>
+            <a href="#WHO-IS" class="button">Présentation</a>
             <a href="#" class="button">Projets</a>
             <a href="#" class="button">Contact</a>
             <a href="#" class="button">Design</a>
         </nav>
     </header>
 
-    <div class="main-panel" style="background-image: url('assets-png/background-generic.png');"> 
+    <div id="HOME" class="main-panel" style="background-image: url('assets-png/background-generic.png');">
         <div class="computer-img">
             <img class="back" src="assets/main-image-transparent.svg">
             <img class="front" src="assets/main-image.svg">
         </div>
+
+        <div class="container">
+            <h1>KinderrKill</h1>
+            <p>
+                Développeur java & web<br>
+                Youtuber & Streamer
+            </p>
+            <a onclick="displayContainer(true)" class="DISPLAY-CONTAINER-VIDEO" href="#">Me découvrir...</a>
+        </div>
     </div>
 
-    <div class="who-is">
-        <h1>Qui est KinderrKill ?</h1>
+    <div id="WHO-IS" class="who-is">
+        <h2>Qui est "KinderrKill" ?</h2>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium nesciunt in pariatur exercitationem
+            quaerat ex voluptatibus repellat iste nemo qui laudantium, animi quas molestias dolore facere libero minus
+            ipsa fuga.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sequi fugit est nemo consequuntur sit iure,
+            mollitia obcaecati, dignissimos repellat quia quaerat voluptatem omnis, exercitationem quod magni ipsum
+            pariatur dicta!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt eligendi culpa ipsa, expedita nihil esse
+            possimus eveniet? Eaque pariatur delectus possimus accusantium unde, ad omnis reiciendis laborum saepe
+            eligendi cum!
+        </p>
+
+        <div class="info-yt-container">
+            
+        </div>
+        <!--<h5 id="sub">Abonnés : </h5>
+        <h5 id="view">Vues : </h5>
+        <h5 id="videos">Vidéos : </h5>-->
     </div>
 
-    <div class="project-panel" style="background-image: url('assets-png/background-wave.png');">
-        <h1>Mes projets</h1>
+    <!--<div class="project-panel" style="background-image: url('assets-png/background-wave.png');">
+        <h2>Mes projets</h2>
+    </div>-->
+
+    <div id="CONTAINER-VIDEO-ID" class="container-video">
+        <iframe width="1020" height="630" src="https://www.youtube.com/embed/mtwAkVty5RE" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        <a class="hide-button" onclick="displayContainer(false)" id="HIDE-CONTAINER-VIDEO">X</a>
+        <a class="subscribe-button" href="https://bit.ly/30AkaF5" target="_blank">S'abonner</a>
     </div>
+
+    <!-- JAVA SCRIPT -->
+    <script>
+        var videoContainer = document.getElementById('CONTAINER-VIDEO-ID');
+
+        function displayContainer(isDisplay) {
+            videoContainer.style.display = isDisplay ? 'block' : 'none';
+        }
+    </script>
+
+    <!-- Youtube datas scripts -->
+    <script>
+        const APIKey = "AIzaSyBqnzOFNpQ_NatgjLucdFDbbDUYg-b3Glc";
+        const UserID = "UCzzeZfPXqh18DFtI2ml0DVg";
+
+        const subCount = document.getElementById("sub");
+        const viewCount = document.getElementById("view");
+        const videoCount = document.getElementById("videos");
+
+        let getYoutubeDatas = () => {
+        fetch(`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${UserID}&key=${APIKey}`).then(response => {
+            return response.json()
+        }).then(data => {
+            subCount.textContent = subCount.textContent + data["items"][0].statistics.subscriberCount; 
+            viewCount.textContent = viewCount.textContent + data["items"][0].statistics.viewCount; 
+            videoCount.textContent = videoCount.textContent + data["items"][0].statistics.videoCount; 
+        })
+    }
+
+    getYoutubeDatas();
+    </script>
+    <!-- JAVA SCRIPT-->
 </body>
 
 </html>
