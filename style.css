@@ -93,7 +93,7 @@ body::-webkit-scrollbar-track {
   
 body::-webkit-scrollbar-thumb {
     background-color: white;
-    border-radius: 20px;
+    border-radius: 5px;
     border: 2px solid orange;
 }
 
@@ -368,6 +368,23 @@ body::-webkit-scrollbar-thumb {
     font-size: 0.7em;
     
     color: #993415;
+}
+
+.design-panel .a-gioco {
+    text-decoration: none;
+    color: black;
+}
+
+.design-panel a {
+    text-decoration: none;
+    color: #752810;
+    font-size: 1em;
+}
+
+.design-panel a:hover {
+    text-decoration: underline;
+    color: #411609;
+    font-size: 1em;
 }
 
 /*=======================*/
