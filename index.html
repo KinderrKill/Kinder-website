@@ -10,6 +10,9 @@
 
     <link rel="icon" href="assets/logo.svg">
     <title>KinderrKill - Développement Minecraft</title>
+
+    <!-- Import Script -->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
 <body>
@@ -21,9 +24,9 @@
         <nav class="main-nav">
             <a href="#HOME" class="button">Accueil</a>
             <a href="#WHO-IS" class="button">Présentation</a>
-            <a href="#" class="button">Projets</a>
-            <a href="#" class="button">Contact</a>
-            <a href="#" class="button">Design</a>
+            <a href="#PROJECT-ID" class="button">Projets</a>
+            <a href="#CONTACT-ID" class="button">Contact</a>
+            <a href="#DESIGN-ID" class="button">Design</a>
         </nav>
     </header>
 
@@ -41,6 +44,14 @@
             </p>
             <a onclick="displayContainer(true)" class="DISPLAY-CONTAINER-VIDEO" href="#">Me découvrir...</a>
         </div>
+
+        <!-- Decorations -->
+        <img class="main-triangle-0" src="assets/triangle-0.svg">
+        <img class="main-triangle-1" src="assets/triangle-1.svg">
+        <img class="main-triangle-2" src="assets/triangle-2.svg">
+
+        <img class="main-circle-1" src="assets/white-circle.svg">
+        <img class="main-circle-2" src="assets/orange-circle.svg">
     </div>
 
     <div id="WHO-IS" class="who-is">
@@ -57,18 +68,70 @@
             eligendi cum!
         </p>
 
-        <div class="info-yt-container">
-            
+        <div class="info-container">
+            <img src="assets-png/subIcon.png">
+            <h5>Abonnés : </h5>
+            <h6 class="panel-subs"></h6>
+            <img src="assets-png/statsIcon.png">
+            <h5>Vues : </h5>
+            <h6 class="panel-view"></h6>
+            <img src="assets-png/youtubeIcon.png">
+            <h5>Vidéos : </h5>
+            <h6 class="panel-videos"></h6>
+            <h5 class="label-chanel-info">Statistiques Youtube<br>Chaîne créée le 06/12/10</h5>
         </div>
-        <!--<h5 id="sub">Abonnés : </h5>
-        <h5 id="view">Vues : </h5>
-        <h5 id="videos">Vidéos : </h5>-->
     </div>
 
-    <!--<div class="project-panel" style="background-image: url('assets-png/background-wave.png');">
+    <div id="PROJECT-ID" class="project-panel" style="background-image: url('assets-png/background-wave.png');">
         <h2>Mes projets</h2>
-    </div>-->
+    </div>
 
+    <div id="CONTACT-ID" class="contact-panel">
+        <h2>Me contacter</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam molestias, tempore quos reiciendis atque molestiae, eaque esse quasi mollitia harum minima animi suscipit vitae autem. Est doloremque illo eligendi iusto?
+        </p>
+        <form action="" method="post">
+            <div class="form-name">
+                <label for="name">E-Mail :</label>
+                <input type="email" id="mail" name="user_mail">
+            </div>
+            <div class="form-mail">
+                <label for="mail">Sujet :</label>
+                <input list="form-values" id="subject" name="user_subject">
+            </div>
+            <div class="form-msg">
+                <label for="msg">Message :</label>
+                <textarea id="msg" name="user_message"></textarea>
+            </div>
+            <button class="submit-button" type="sumbit">Envoyer le message</button>
+        </form>
+
+        <datalist id="form-values">
+            <option value="Value 1">
+            <option value="Value 2">
+            <option value="Value 3">
+            <option value="Value 4">
+            <option value="Autre demande">
+        </datalist>
+    </div>
+
+    <div id="DESIGN-ID" class="design-panel" style="background-image: url('assets-png/background-wave.png');">
+        <h2>Design du site</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos qui quasi dicta ipsam harum aliquid beatae
+            similique ea ut distinctio ad, voluptatum quibusdam vel, numquam, doloremque perspiciatis omnis amet
+            praesentium.
+        </p>
+
+        <h6 class="copyright">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur inventore,
+            accusamus, ducimus expedita ab quaerat vitae assumenda quos atque necessitatibus repellendus magni maxime
+            corrupti quasi facilis unde quae possimus. Dignissimos!</h6>
+    </div>
+
+    <!--=============-->
+    <!-- OTHER STUFF -->
+    <!--=============-->
     <div id="CONTAINER-VIDEO-ID" class="container-video">
         <iframe width="1020" height="630" src="https://www.youtube.com/embed/mtwAkVty5RE" title="YouTube video player"
             frameborder="0"
@@ -78,7 +141,9 @@
         <a class="subscribe-button" href="https://bit.ly/30AkaF5" target="_blank">S'abonner</a>
     </div>
 
+    <!--=============-->
     <!-- JAVA SCRIPT -->
+    <!--=============-->
     <script>
         var videoContainer = document.getElementById('CONTAINER-VIDEO-ID');
 
@@ -92,23 +157,45 @@
         const APIKey = "AIzaSyBqnzOFNpQ_NatgjLucdFDbbDUYg-b3Glc";
         const UserID = "UCzzeZfPXqh18DFtI2ml0DVg";
 
-        const subCount = document.getElementById("sub");
-        const viewCount = document.getElementById("view");
-        const videoCount = document.getElementById("videos");
+        const subCount = document.querySelector(".panel-subs");
+        const viewCount = document.querySelector(".panel-view");
+        const videoCount = document.querySelector(".panel-videos");
 
         let getYoutubeDatas = () => {
-        fetch(`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${UserID}&key=${APIKey}`).then(response => {
-            return response.json()
-        }).then(data => {
-            subCount.textContent = subCount.textContent + data["items"][0].statistics.subscriberCount; 
-            viewCount.textContent = viewCount.textContent + data["items"][0].statistics.viewCount; 
-            videoCount.textContent = videoCount.textContent + data["items"][0].statistics.videoCount; 
-        })
-    }
+            fetch(`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${UserID}&key=${APIKey}`).then(response => {
+                return response.json()
+            }).then(data => {
+                let subs = data["items"][0].statistics.subscriberCount;
+                let view = data["items"][0].statistics.viewCount;
+                let videos = data["items"][0].statistics.videoCount;
 
-    getYoutubeDatas();
+                var subsString = "0";
+                var viewsString = "0";
+                var videosString = "0";
+
+                subCount.textContent = getFormatedCount(subs);
+                viewCount.textContent = getFormatedCount(view);
+                videoCount.textContent = getFormatedCount(videos);
+            })
+        }
+
+        getYoutubeDatas();
+
+        function getFormatedCount(countToFormat) {
+            var finalStr = countToFormat;
+            if (countToFormat.length > 6) {
+                finalStr = countToFormat.substring(0, countToFormat.length - 6) + "," +
+                    countToFormat.substring(countToFormat.length - 6, countToFormat.length - 3) + "," +
+                    countToFormat.substring(countToFormat.length - 3, countToFormat.length);
+            } else if (countToFormat.length > 3) {
+                finalStr = countToFormat.substring(0, countToFormat.length - 3) + "," + countToFormat.substring(countToFormat.length - 3);
+            }
+            return finalStr;
+        }
     </script>
-    <!-- JAVA SCRIPT-->
+    <!--=============-->
+    <!-- JAVA SCRIPT -->
+    <!--=============-->
 </body>
 
 </html>
