@@ -52,8 +52,7 @@ h2 {
 }
 
 .nav-logo img.top:hover {
-    opacity: 0;
-    cursor: pointer;
+    opacity: 0; 
 }
 
 .main-nav {
