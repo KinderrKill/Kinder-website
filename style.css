@@ -93,7 +93,7 @@ body::-webkit-scrollbar-track {
   
 body::-webkit-scrollbar-thumb {
     background-color: white;
-    border-radius: 20px;
+    border-radius: 5px;
     border: 2px solid orange;
 }
 
@@ -128,6 +128,7 @@ body::-webkit-scrollbar-thumb {
     font-size: 3em;
     margin-left: -3px;
     color: white;
+    text-shadow: -3px 3px #993415;
 }
 
 .main-panel .container p {
@@ -136,9 +137,20 @@ body::-webkit-scrollbar-thumb {
     margin-bottom: 50px;
     color: white;
     font-size: 0.9em;
+    line-height: 35px;
+
+    text-shadow: -1px 1px #D97D0E;
 }
 
-.container a {
+.container .minecraft-link {
+    text-decoration: none;
+    color: #D97D0E;
+    font-size: 1em;
+
+    text-shadow: 1px 1px gray;
+}
+
+.container .DISPLAY-CONTAINER-VIDEO {
     text-decoration: none;
     color: white;
 
@@ -150,7 +162,7 @@ body::-webkit-scrollbar-thumb {
     box-shadow: 0 4px 4px 0 rgba(0,0,0,0.75);
 }
 
-.container a:hover {
+.container .DISPLAY-CONTAINER-VIDEO:hover {
     background-color: #993415;
     box-shadow: 0px 8px 8px 0px rgba(0,0,0,0.75);
 }
@@ -161,12 +173,16 @@ body::-webkit-scrollbar-thumb {
     width: 8%;
     left: 5vh;
     top: 82vh;
+
+    animation: shake 5s infinite;
 }
 
 .main-triangle-1 {
     position: absolute;
     width: 10%;
     left: 90%;
+
+    animation: shake 8s infinite;
 }
 
 .main-triangle-2 {
@@ -181,6 +197,7 @@ body::-webkit-scrollbar-thumb {
     width: 8%;
     left: -3%;
     top: 18%;
+    
 }
 
 .main-circle-2 {
@@ -190,24 +207,39 @@ body::-webkit-scrollbar-thumb {
     right: -1%;
 }
 
+@keyframes shake {
+    0% {
+        transform: translate3d(5px, -15px, 0);
+    }
+    50% {
+        transform: translate3d(-5px, 0px, 0);
+    }
+    100% {
+        transform: translate3d(5px, -15px, 0);
+    }
+  }
+
 /*=== WHO IS PANEL ===*/
 .who-is {
     margin: 160px 0;
 }
 
 .who-is p {
-    margin-top: 20px;
-    margin-left: 100px;
+    margin-top: 50px;
+    margin-left: 105px;
 
     width: 50%;
     font-size: 0.9em;
     color: black;
+
+    line-height: 25px;
+    letter-spacing: 0.5px;
 }
 
 .info-container {
     position: relative;
     left: 60%;
-    margin: -245px 0 0 110px;
+    margin: -300px 0 0 110px;
     width: 300px;
     height: 350px;
     border-left: 8px solid #993415;
@@ -255,15 +287,87 @@ body::-webkit-scrollbar-thumb {
 /*=== PROJECT PANEL ===*/
 .project-panel {
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     
-    background-size: 100% 100vh;
+    background-size: 100% 90vh;
 }
 
 .project-panel h2 {
     position: relative;
-    top: 150px;
+    top: 110px;
     color: #993415;
+}
+
+.project-panel .project-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 170px;
+
+    width: 100%;
+    height: 400px;
+}
+
+.project-container .title-frame {
+    position: relative;
+
+    width: 350px;
+    height: 400px;
+
+    margin: 20px;
+    border: solid 3px #993415;
+
+    box-shadow: inset 0px 0px 10px 2px #993415;
+}
+
+.title-frame .description-frame {
+    position: relative;
+    top: 80%;
+
+    width: 100%;
+    height: 80px;
+
+    text-align: center;
+    background: rgb(0, 0, 0, 0.6);
+    
+}
+
+.title-frame:hover {
+    transform: scale(1.05);
+    border: solid 3px #D97D0E;
+    box-shadow: inset 0px 0px 10px 2px #D97D0E;
+}
+
+.title-frame h3 {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -11px;
+
+    font-size: 0.6em;
+
+    width: 150px;
+    padding: 5px;
+    border-radius: 10px;
+
+    background: white;
+}
+
+.title-frame a {
+    position: relative;
+    top: 5px;
+
+    font-size: 0.7em;
+    color: white;
+    text-decoration: none;
+}
+
+.title-frame a:hover {
+    position: relative;
+
+    color: rgba(255, 208, 0, 0.877);
+    text-decoration: underline;
 }
 
 /*=== CONTACT PANEL ===*/
@@ -340,12 +444,15 @@ body::-webkit-scrollbar-thumb {
 /*=== DESIGN PANEL ===*/
 .design-panel {
     width: 100%;
-    height: 50vh;
+    height: 40vh;
 }
 
 .design-panel h2 {
     position: relative;
     top: 150px;
+
+    margin-bottom: 20px;
+
     color: #993415;
 }
 
@@ -353,7 +460,6 @@ body::-webkit-scrollbar-thumb {
     position: relative;
     top: 150px;
     
-    margin-top: 20px;
     margin-left: 100px;
 
     font-size: 0.9em;
@@ -362,12 +468,29 @@ body::-webkit-scrollbar-thumb {
 
 .design-panel h6 {
     position: relative;
-    top: 78%;
+    top: 240px;
 
     text-align: center;
     font-size: 0.7em;
     
     color: #993415;
+}
+
+.design-panel .a-gioco {
+    text-decoration: none;
+    color: black;
+}
+
+.design-panel a {
+    text-decoration: none;
+    color: #752810;
+    font-size: 1em;
+}
+
+.design-panel a:hover {
+    text-decoration: underline;
+    color: #411609;
+    font-size: 1em;
 }
 
 /*=======================*/

@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="92" viewBox="0 0 1920 92">
-  <defs>
-    <linearGradient id="linear-gradient" x1="1" y1="0.5" x2="0" y2="0.577" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#993415"/>
-      <stop offset="1" stop-color="#d97d0e"/>
-    </linearGradient>
-  </defs>
-  <rect id="Fond_menu_" data-name="Fond menu " width="1920" height="92" opacity="0.26" fill="url(#linear-gradient)" style="mix-blend-mode: multiply;isolation: isolate"/>
-</svg>
